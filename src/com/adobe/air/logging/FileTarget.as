@@ -51,7 +51,7 @@ package com.adobe.air.logging
 	{
 		private const DEFAULT_LOG_PATH:String = "app-storage:/application.log";
 		
-		private var log:File;
+		protected var log:File;
 		
 		public function FileTarget(logFile:File = null)
 		{
@@ -75,7 +75,7 @@ package com.adobe.air.logging
 			write(message);
 	    }		
 		
-		private function write(msg:String):void
+		protected function write(msg:String):void
 		{		
 			var fs:FileStream = new FileStream();
 				fs.open(log, FileMode.APPEND);
